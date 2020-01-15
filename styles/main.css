@@ -92,9 +92,38 @@ h1 {
   font-weight: normal;
   font-style: normal; }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0; }
+
+body {
+  padding: 0; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+ul,
+li {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  list-style: none; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%; }
+
 .header {
-  background-color: #2c2c2c;
-  padding: 0 5%; }
+  background-color: #2c2c2c; }
   .header__top {
     height: 120px;
     max-width: 1150px;
@@ -135,13 +164,13 @@ h1 {
     white-space: nowrap;
     cursor: pointer;
     position: relative;
-    margin: 0 3%;
+    margin: 0 7%;
     color: #fff;
     text-transform: uppercase;
     -webkit-animation: pop-down 0.5s ease-in-out forwards;
             animation: pop-down 0.5s ease-in-out forwards; }
     .nav__list-item:last-child {
-      margin: 0 0 0 95%;
+      margin: 0 0 0 55%;
       -webkit-animation: pop-out-right 0.5s ease-in-out forwards;
               animation: pop-out-right 0.5s ease-in-out forwards; }
     .nav__list-item:last-child::before {
@@ -247,15 +276,15 @@ label:hover,
   color: #fff;
   margin-top: -2px;
   height: 680px;
-  border-radius: 0 0 0 25px;
-  padding: 0 5%; }
+  border-radius: 0 0 0 25px; }
+  .main-info__text {
+    max-width: 335px; }
   .main-info__wrapper {
     margin: auto;
     max-width: 1150px;
     display: grid;
     grid-template-columns: repeat(2, 1fr); }
   .main-info__title {
-    font-weight: 600;
     font-size: 64px;
     line-height: 68px;
     letter-spacing: -2px;
@@ -265,66 +294,61 @@ label:hover,
     -webkit-animation: pop-out-left 0.5s ease-in-out forwards;
             animation: pop-out-left 0.5s ease-in-out forwards; }
   .main-info__slogan {
-    font-weight: normal;
     font-size: 18px;
     line-height: 27px;
-    font-family: "Open Sans", sans-serif;
     display: block;
     margin-top: 32px;
     -webkit-animation: pop-out-left 0.5s ease-in-out forwards;
             animation: pop-out-left 0.5s ease-in-out forwards; }
+    .main-info__slogan:last-of-type {
+      margin-top: 0; }
   .main-info__button {
     width: 226px;
     height: 50px;
     margin-top: 83px;
     border: 0;
-    -webkit-transition: all 0.2s linear;
-    transition: all 0.2s linear;
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear;
     -webkit-animation: pop-up 0.5s ease-in-out forwards;
             animation: pop-up 0.5s ease-in-out forwards; }
-    .main-info__button:hover {
+    .main-info__button:hover, .main-info__button:focus {
       cursor: pointer;
-      -webkit-transform: scale(1.03);
-              transform: scale(1.03); }
+      -webkit-transform: scale(2);
+              transform: scale(2);
+      border: 0;
+      background-color: #ff9c8e; }
 
 .about {
-  background-color: #e5e5e5;
-  height: 544px;
-  margin: -20px 0;
-  position: absolute;
-  z-index: -1;
   width: 100%; }
   .about__wrapper {
     max-width: 754px;
     margin: auto; }
   .about__title {
-    margin-top: 168px;
     font-family: Poppins, sans-serif;
     color: #253757;
     font-weight: 600;
     font-size: 32px;
     line-height: 150%;
+    margin-top: 148px;
     -webkit-animation: pop-down 0.5s ease-in-out forwards;
             animation: pop-down 0.5s ease-in-out forwards; }
   .about__text {
-    margin-top: 16px;
-    font-family: "Open Sans", sans-serif;
-    font-style: normal;
     font-weight: 600;
     font-size: 24px;
     line-height: 150%;
-    color: #6c788b;
+    margin-top: 16px;
     -webkit-animation: pop-up 0.5s ease-in-out forwards;
             animation: pop-up 0.5s ease-in-out forwards;
     margin-bottom: 148px; }
 
 .experties {
-  margin-top: 504px;
   height: 759px;
-  padding: 0 4%;
   background-color: #fff;
   border-radius: 30px; }
   .experties__title {
+    font-family: Poppins, sans-serif;
+    color: #253757;
+    font-weight: 600;
     height: 206px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -335,25 +359,44 @@ label:hover,
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
-    font-family: Poppins, sans-serif;
-    font-style: normal;
-    font-weight: 600;
     font-size: 52px;
     line-height: 150%;
-    color: #253757; }
+    margin-bottom: 64px; }
 
-.servis {
+.servises {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  max-width: 1150px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.service {
   width: 264px;
   height: 334px;
-  position: relative; }
-  .servis__img {
-    margin: auto; }
+  position: relative;
+  text-align: center; }
+  .service__img {
+    margin: auto;
+    border-radius: 16px; }
+  .service__title {
+    font-family: Poppins, sans-serif;
+    color: #253757;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    margin-top: 40px; }
+  .service__info {
+    font-size: 14px;
+    margin-top: 16px; }
 
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+.service:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s; }
 
 body {
   overflow-x: hidden;
@@ -362,30 +405,18 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 13px; }
 
-ul,
-li {
-  -webkit-margin-before: 0;
-          margin-block-start: 0;
-  -webkit-margin-after: 0;
-          margin-block-end: 0;
-  -webkit-padding-start: 0;
-          padding-inline-start: 0;
-  list-style: none; }
-
-a {
-  text-decoration: none; }
-
 a:hover {
   cursor: pointer; }
 
 .button {
   background-color: #2060f6;
   color: #fff;
-  font-weight: 600;
   font-size: 15px;
   line-height: 22px;
   text-align: center;
-  border-radius: 8px; }
+  border-radius: 8px;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s; }
 
 label:hover {
   -webkit-transform: scale(1.2);
