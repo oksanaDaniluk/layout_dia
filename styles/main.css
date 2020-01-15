@@ -62,6 +62,26 @@
     -webkit-transform: translateX(0);
             transform: translateX(0); } }
 
+@-webkit-keyframes apparition {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes apparition {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes pop-down {
+  from {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px); }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
 h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 400; }
@@ -89,17 +109,21 @@ h1 {
 .logo {
   width: 44.82px;
   height: 25.63px;
-  margin-right: 70px;
   -webkit-animation: pop-out-left 0.5s ease-in-out;
           animation: pop-out-left 0.5s ease-in-out; }
+  .logo__link {
+    margin-right: 6%; }
+    .logo__link:hover {
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+      -webkit-transition-duration: 0.5s;
+              transition-duration: 0.5s; }
 
 .nav {
   font-family: Poppins, sans-serif;
   font-weight: bold;
   letter-spacing: 3px;
-  font-size: 13px;
-  max-width: 1025px;
-  width: 100%; }
+  max-width: 1025px; }
   .nav__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -108,6 +132,7 @@ h1 {
         -ms-flex-align: end;
             align-items: flex-end; }
   .nav__list-item {
+    white-space: nowrap;
     cursor: pointer;
     position: relative;
     margin: 0 3%;
@@ -130,9 +155,15 @@ h1 {
       left: -1px; }
   .nav__list-link {
     color: #fff; }
+    .nav__list-link:hover {
+      color: #ff9c8e;
+      -webkit-transition-duration: 0.5s;
+              transition-duration: 0.5s; }
 
 .slider {
-  color: #fff; }
+  color: #fff;
+  -webkit-animation: pop-out-right 0.5s ease-in-out forwards;
+          animation: pop-out-right 0.5s ease-in-out forwards; }
   .slider__wrapper {
     min-height: 680px;
     min-width: 687px;
@@ -198,19 +229,18 @@ h1 {
     top: -4px;
     width: 12px;
     border-radius: 50%; }
-  .slider__label:hover,
-  .slider #slide1:checked ~ .controls label:nth-of-type(1),
-  .slider #slide2:checked ~ .controls label:nth-of-type(2),
-  .slider #slide3:checked ~ .controls label:nth-of-type(3) {
-    background: #ff9c8e; }
+
+label:hover,
+#slide1:checked ~ label:nth-of-type(1),
+#slide2:checked ~ label:nth-of-type(2),
+#slide3:checked ~ label:nth-of-type(3) {
+  background: #ff9c8e; }
 
 #slide1:checked ~ .slider__slides > .slider__slide-1,
 #slide2:checked ~ .slider__slides > .slider__slide-2,
 #slide3:checked ~ .slider__slides > .slider__slide-3 {
   opacity: 1;
-  z-index: 1;
-  -webkit-transform: scale(1);
-          transform: scale(1); }
+  z-index: 1; }
 
 .main-info {
   background-color: #2c2c2c;
@@ -231,21 +261,27 @@ h1 {
     letter-spacing: -2px;
     color: #fff;
     display: block;
-    margin-top: 120px; }
+    margin-top: 120px;
+    -webkit-animation: pop-out-left 0.5s ease-in-out forwards;
+            animation: pop-out-left 0.5s ease-in-out forwards; }
   .main-info__slogan {
     font-weight: normal;
     font-size: 18px;
     line-height: 27px;
     font-family: "Open Sans", sans-serif;
     display: block;
-    margin-top: 32px; }
+    margin-top: 32px;
+    -webkit-animation: pop-out-left 0.5s ease-in-out forwards;
+            animation: pop-out-left 0.5s ease-in-out forwards; }
   .main-info__button {
     width: 226px;
     height: 50px;
     margin-top: 83px;
     border: 0;
     -webkit-transition: all 0.2s linear;
-    transition: all 0.2s linear; }
+    transition: all 0.2s linear;
+    -webkit-animation: pop-up 0.5s ease-in-out forwards;
+            animation: pop-up 0.5s ease-in-out forwards; }
     .main-info__button:hover {
       cursor: pointer;
       -webkit-transform: scale(1.03);
@@ -320,9 +356,11 @@ h1 {
           box-sizing: border-box; }
 
 body {
-  background: #eee;
   overflow-x: hidden;
-  background-color: #fff; }
+  background-color: #e5e5e5;
+  color: #6c788b;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px; }
 
 ul,
 li {
@@ -348,5 +386,9 @@ a:hover {
   line-height: 22px;
   text-align: center;
   border-radius: 8px; }
+
+label:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2); }
 
 /*# sourceMappingURL=main.css.map */
