@@ -98,7 +98,11 @@ h1 {
   margin: 0; }
 
 body {
-  padding: 0; }
+  overflow-x: hidden;
+  background-color: #f2f6fa;
+  color: #6c788b;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px; }
 
 a {
   text-decoration: none;
@@ -500,7 +504,7 @@ label:hover {
     .card__link::before {
       display: inline-block;
       content: "";
-      background-image: url(/images/learn-more/Vector.svg);
+      background-image: url(../images/learn-more/Vector.svg);
       background-color: #2060f6;
       border-radius: 50%;
       width: 40px;
@@ -514,7 +518,7 @@ label:hover {
 
 body {
   overflow-x: hidden;
-  background-color: #e5e5e5;
+  background-color: #f2f6fa;
   color: #6c788b;
   font-family: "Open Sans", sans-serif;
   font-size: 13px; }
