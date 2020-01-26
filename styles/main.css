@@ -182,7 +182,7 @@ span {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1; }
+  z-index: 3; }
 
 .mobile-nav {
   position: fixed;
@@ -206,7 +206,7 @@ span {
   background: rgba(24, 39, 51, 0.85);
   border-radius: 50%;
   width: 200vw;
-  height: 200vw;
+  height: 250vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -249,7 +249,7 @@ span {
 .toggler {
   position: absolute;
   top: 30px;
-  left: 30px;
+  left: 0;
   z-index: 2;
   cursor: pointer;
   width: 50px;
@@ -259,7 +259,7 @@ span {
 .hamburger {
   position: absolute;
   top: 30px;
-  left: 30px;
+  left: 0;
   z-index: 1;
   width: 60px;
   height: 60px;
@@ -930,6 +930,9 @@ label:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+    .features__item:hover {
+      -webkit-transform: scale(1.02);
+              transform: scale(1.02); }
     .features__item:last-of-type {
       margin-bottom: 0; }
   .features__list-link:hover {
@@ -952,6 +955,9 @@ label:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+    .features__link:hover {
+      -webkit-transform: scale(1.02);
+              transform: scale(1.02); }
   .features__text {
     max-width: 263px; }
   .features__photo {
@@ -973,7 +979,7 @@ label:hover {
     .features__photo {
       height: 85%; } }
 
-@media (max-width: 870px) {
+@media (max-width: 1024px) {
   .features {
     -webkit-transition-duration: 0.3s;
             transition-duration: 0.3s;
@@ -987,7 +993,9 @@ label:hover {
 
 @media (max-width: 600px) {
   .features {
-    padding: 90px 20px; }
+    max-width: 85%;
+    margin-left: 50px;
+    padding: 90px 10px; }
     .features__photo {
       -webkit-transition-duration: 0.3s;
               transition-duration: 0.3s;
@@ -997,6 +1005,8 @@ label:hover {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column; }
+    .features__link {
+      margin: 0 0 10px; }
     .features__picture {
       margin: 20px 0; }
     .features__title {
@@ -1035,14 +1045,17 @@ label:hover {
     margin-bottom: 168px; }
 
 @media (max-width: 1200px) {
-  .testimonials__reviews {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
-  .testimonials__review {
-    margin-top: 20px; } }
+  .testimonials {
+    max-width: 90%;
+    padding: 0; }
+    .testimonials__reviews {
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+    .testimonials__review {
+      margin-top: 20px; } }
 
 .review {
   width: 314px;
