@@ -471,9 +471,9 @@ span {
     bottom: 48px; }
   .slider__slide-3_text {
     position: absolute;
-    left: 180px;
+    left: 200px;
     bottom: 48px;
-    color: #2c2c2c; }
+    color: #2060f6; }
   .slider__slide-intro {
     font-family: Poppins, sans-serif;
     font-weight: bold;
@@ -1397,7 +1397,11 @@ label:hover {
         -ms-flex-align: center;
             align-items: center;
     padding-top: 60px; }
-  .contact__butoon {
+  .contact__form {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .contact__button {
     -webkit-transition-duration: 0.3s;
             transition-duration: 0.3s;
     margin: 0 auto 60px; }
