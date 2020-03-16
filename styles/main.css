@@ -469,6 +469,11 @@ span {
     position: absolute;
     left: 200px;
     bottom: 48px; }
+  .slider__slide-3_text {
+    position: absolute;
+    left: 180px;
+    bottom: 48px;
+    color: #2c2c2c; }
   .slider__slide-intro {
     font-family: Poppins, sans-serif;
     font-weight: bold;
@@ -1125,6 +1130,11 @@ label:hover {
     font-size: 13px;
     line-height: 19px;
     color: #c0cdd7; }
+  .review:hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    -webkit-transition-duration: 1s;
+            transition-duration: 1s; }
 
 @media (max-width: 1200px) {
   .review {
