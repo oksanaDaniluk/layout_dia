@@ -1330,10 +1330,10 @@ label:hover {
       border: none;
       opacity: 1;
       border-bottom: 1px solid #2060f6; }
-  .contact__butoon {
+  .contact__button {
     margin-top: 80px;
     height: 56px; }
-    .contact__butoon:hover {
+    .contact__button:hover {
       -webkit-transform: scale(1.01);
               transform: scale(1.01); }
   .contact__info {
